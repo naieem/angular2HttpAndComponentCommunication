@@ -9,13 +9,21 @@ import {Data} from '../model/data.model';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
+  /**
+   * Declaration of all local variables
+   */
   data:Data[];
   parentstring:string="this is from parent";
   parentStringToEmit:string;
   stringToRightSidebar:string;
+  /** end of declaration of local variables */
+
   constructor(private dataservice:DataserviceService) { }
+
+  /**
+   * Getting data via http call
+   */
   loadData(){
-    // Get all data
      this.dataservice.getDatas()
                        .subscribe(
                             value=>{
@@ -29,11 +37,17 @@ export class ContentComponent implements OnInit {
   popup(){
     alert("sdfdsf");
   }
+  /**
+   * Function calls when notification emits from left sidebar
+   * @param message 
+   */
   onNotify(message:string) {
     this.parentStringToEmit=message;
     this.stringToRightSidebar=message;
   }
-
+  /**
+   * function calls after constructor
+   */
   ngOnInit() {
     this.loadData();
   }
