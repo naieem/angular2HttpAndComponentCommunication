@@ -12,6 +12,7 @@ export class ContentComponent implements OnInit {
   data:Data[];
   parentstring:string="this is from parent";
   parentStringToEmit:string;
+  stringToRightSidebar:string;
   constructor(private dataservice:DataserviceService) { }
   loadData(){
     // Get all data
@@ -28,8 +29,9 @@ export class ContentComponent implements OnInit {
   popup(){
     alert("sdfdsf");
   }
-  onNotify(message:string):void {
+  onNotify(message:string) {
     this.parentStringToEmit=message;
+    this.stringToRightSidebar=message;
   }
 
   ngOnInit() {

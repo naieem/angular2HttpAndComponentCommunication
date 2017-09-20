@@ -9,16 +9,17 @@ export class SidebarComponent implements OnInit {
   title:string;
   @Input() description:string;
   @Input() fromParent:string;
+  @Output() notify: EventEmitter<string> = new EventEmitter<string>();
   constructor() {
     this.title="Title from sidebar";
-   }
+  }
 
   ngOnInit() {
   }
-  @Output() notify: EventEmitter<string> = new EventEmitter<string>();
   
-    onClick() {
-      this.notify.emit('Click from nested component');
-    }
+  onClick() {
+    debugger;
+    this.notify.emit('Click from nested component');
+  }
 
 }

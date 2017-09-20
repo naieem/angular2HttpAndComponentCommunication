@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
  * service declaration
  */
 import { DataserviceService } from './service/dataservice.service';
+import { RightSidebarComponent } from './right-sidebar/right-sidebar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DataserviceService } from './service/dataservice.service';
     HeadComponent,
     MenuComponent,
     ContentComponent,
-    FooterComponent
+    FooterComponent,
+    RightSidebarComponent
   ],
   imports: [
     BrowserModule,
