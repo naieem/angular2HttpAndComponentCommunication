@@ -1,0 +1,6 @@
+<app-sidebar [description]="parentstring" (notify)='onNotify($event)' [fromParent]="parentStringToEmit"></app-sidebar>
+<div class="frm">
+    <li *ngFor="let comment of data" (click)="popup()">
+        {{comment.title}}
+    </li>
+</div>
